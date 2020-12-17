@@ -65,6 +65,7 @@ public class CubeBehaviour : MonoBehaviour
     public bool isGrounded;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +82,7 @@ public class CubeBehaviour : MonoBehaviour
     {
         max = Vector3.Scale(bounds.max, transform.localScale) + transform.position;
         min = Vector3.Scale(bounds.min, transform.localScale) + transform.position;
-
+       
     }
 
     private void OnDrawGizmos()
@@ -93,5 +94,9 @@ public class CubeBehaviour : MonoBehaviour
             Gizmos.DrawWireCube(transform.position, Vector3.Scale(new Vector3(1.0f, 1.0f, 1.0f), transform.localScale));
         }
     }
+
+
+
+
 
 }
