@@ -11,6 +11,8 @@ public class ButtonScript : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Button btn = StartButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }

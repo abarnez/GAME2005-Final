@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        goBack();
         _Fire();
         _Move();
     }
@@ -86,6 +88,14 @@ public class PlayerBehaviour : MonoBehaviour
                 var tempBullet = bulletManager.GetBullet(bulletSpawn.position, bulletSpawn.forward);
                 tempBullet.transform.SetParent(bulletManager.gameObject.transform);
             }
+        }
+    }
+
+    void goBack()
+    {
+        if (Input.GetKeyDown("b"))
+        {
+            SceneManager.LoadScene("Start");
         }
     }
 
